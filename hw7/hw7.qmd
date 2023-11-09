@@ -10,7 +10,7 @@ format:
         code-copy: true
 ---
 
-This document would contain python code that would access the database server of mysql (phpMyAdmin) on the 23FA_users_phungk2 and perform the nessary query statements being asked in each of the following questions from the tables of people, peopleroles, peopleskills, roles, and skills  
+This document would contain python code that would access the database server of mysql (phpMyAdmin) on the 23FA_users_phungk2 and perform the necessary query statements being asked in each of the following questions from the tables of people, peopleroles, peopleskills, roles, and skills  
 
 GITHUB URL:  <https://github.com/cmsc-vcu/cmsc508-fa2023-hw7-Elites100.git>
 
