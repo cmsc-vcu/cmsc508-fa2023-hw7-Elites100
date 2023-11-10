@@ -94,24 +94,42 @@ The project would access the database server of mysql (phpMyAdmin) on the 23FA_u
 
 ## Crows-foot diagram
 
-The diagram shows relationships between entities in a simple relational database model. Specifically, the diagram depicts the relationships between a CUSTOMER, ORDER, and DELIVERY-ADDRESS
+The diagram shows relationships between entities in a simple relational (crows-foot) database model. Specifically, the diagram depicts the relationships between a PEOPLE, SKILLS, and ROLES; Moreover, the attributes of the relational model represents the fields of the tables in the database
 <br>
-A CUSTOMER can place multiple ORDERs.
-A CUSTOMER can use multiple DELIVERY-ADDRESSes, and each DELIVERY-ADDRESS can be associated with multiple CUSTOMERs.
+A PEOPLE can have experienced in many different SKILLS, and each SKILLS could be aquired by multiple PEOPLE.
+A PEOPLE can have multiple different ROLES, and each ROLES can be assigned to multiple PEOPLE.
+BOTH table connection between 'PEOPLE to SKILLS' and 'PEOPLE to ROLES' have a MANY TO MANY relationship 
 
 ```{mermaid}
 erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+    PEOPLE }|--|{ SKILLS : experienced
+    PEOPLE }|--|{ ROLES : assigned
 
-    CUSTOMER{
+
+    PEOPLE{
         int id
         string first_name
         string last_name
+        string linkedin_url
+        string headshot_url
+        string discord_handle
+        string brief_bio
+        string date_joined
     }
-    DELIVERY-ADDRESS{
+    SKILLS{
         int id
+        string name
+        string description
+        string tag
+        string skill_url
+        int skills_time_commitment
     }
+    ROLES {
+        int id 
+        string name
+        int sort_priority
+    }
+
 ```
 
 

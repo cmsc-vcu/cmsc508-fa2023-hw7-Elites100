@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kevin Phung">
-<meta name="dcterms.date" content="2023-11-08">
+<meta name="dcterms.date" content="2023-11-10">
 
 <title>Homework 7 - Creating a resume database</title>
 <style>
@@ -3363,7 +3363,7 @@ z-index: 1000;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 8, 2023</p>
+      <p class="date">November 10, 2023</p>
     </div>
   </div>
   
@@ -3381,23 +3381,40 @@ z-index: 1000;
 </section>
 <section id="crows-foot-diagram" class="level2">
 <h2 class="anchored" data-anchor-id="crows-foot-diagram">Crows-foot diagram</h2>
-<p>The diagram shows relationships between entities in a simple relational database model. Specifically, the diagram depicts the relationships between a CUSTOMER, ORDER, and DELIVERY-ADDRESS <br> A CUSTOMER can place multiple ORDERs. A CUSTOMER can use multiple DELIVERY-ADDRESSes, and each DELIVERY-ADDRESS can be associated with multiple CUSTOMERs.</p>
+<p>The diagram shows relationships between entities in a simple relational (crows-foot) database model. Specifically, the diagram depicts the relationships between a PEOPLE, SKILLS, and ROLES; Moreover, the attributes of the relational model represents the fields of the tables in the database <br> A PEOPLE can have experienced in many different SKILLS, and each SKILLS could be aquired by multiple PEOPLE. <br> A PEOPLE can have multiple different ROLES, and each ROLES can be assigned to multiple PEOPLE. <br> BOTH table connection between ‘PEOPLE to SKILLS’ and ‘PEOPLE to ROLES’ have a MANY TO MANY relationship</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <div>
 <pre class="mermaid mermaid-js">erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+    PEOPLE }|--|{ SKILLS : experienced
+    PEOPLE }|--|{ ROLES : assigned
 
-    CUSTOMER{
+
+    PEOPLE{
         int id
         string first_name
         string last_name
+        string linkedin_url
+        string headshot_url
+        string discord_handle
+        string brief_bio
+        string date_joined
     }
-    DELIVERY-ADDRESS{
+    SKILLS{
         int id
+        string name
+        string description
+        string tag
+        string skill_url
+        int skills_time_commitment
     }
+    ROLES {
+        int id 
+        string name
+        int sort_priority
+    }
+
 </pre>
 </div>
 </div>
