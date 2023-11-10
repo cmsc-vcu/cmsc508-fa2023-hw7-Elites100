@@ -23,15 +23,17 @@ To interact with the assignment files, the following steps are:
 
 1. The `/hw7` folder contains the main files for the homework assignment.
 2. `hw7.qmd` is the source code file that includes answered qmd file with query statements for each of the questions and addtional descriptions
-3. `hw7.html` contains the rendered version of the `hw6.qmd` file, which can be viewed in your web browser.
-4. `hw7-ddl.sql` is the souce code file that have DDL statements used to modify by creating/insert into the tables in the sql (phpMyAdmin)
+3. `hw7.html` contains the rendered version of the `hw7.qmd` file, which can be viewed in your web browser.
+4. `hw7.ipynb`is a python notebook that is used to run the codes from a cell for preview and identical to the qmd file
+5. `hw7-ddl.sql` is the souce code file that have DDL statements used to modify by creating/insert into the tables in the sql (phpMyAdmin)
 
 ## Folder Structure
 
 - `/hw7`: Contains the assignment files.
 - `/hw7.qmd`: is the source code file that includes answered qmd file with query statements for each of the questions and addtional descriptions
-- `/hw6.html`: Contains the rendered version of the `hw6.qmd` file, which can be viewed in a web browser.
-- `hw7-ddl.sql` is the souce code file that have DDL statements used to modify by creating/insert into the tables in the sql (phpMyAdmin)
+- `/hw6.html`: Contains the rendered version of the `hw7.qmd` file, which can be viewed in a web browser.
+- `hw7.ipynb`: is a python notebook that is used to run the codes from a cell for preview and identical to the qmd file
+- `hw7-ddl.sql`:is the souce code file that have DDL statements used to modify by creating/insert into the tables in the sql (phpMyAdmin)
 
 ## Files and folders
 
